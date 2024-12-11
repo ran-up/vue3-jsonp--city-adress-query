@@ -5,25 +5,29 @@
                 msg
             }}
         </caption>
-        <tr>
-            <th>No</th>
-            <th>City Id</th>
-            <th>City Name</th>
-            <th>Area Code</th>
-            <th>Total Area</th>
-            <th>ZIP Code</th>
-        </tr>
-        <tr v-for="(rs, index) in results" :key="index">
-            <td>{{ index + 1 }}</td>
-            <td>{{ rs.id }}</td>
-            <td>{{ rs.name }}</td>
-            <td>{{ rs.areacode }}</td>
-            <td>{{ rs.totalarea }}</td>
-            <td>{{ rs.zipcode }}</td>
-        </tr>
-        <tr v-if="results.length === 0">
-            <td colspan="6">加载中...</td>
-        </tr>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>City Id</th>
+                <th>City Name</th>
+                <th>Area Code</th>
+                <th>Total Area</th>
+                <th>ZIP Code</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr v-for="(rs, index) in results" :key="index">
+                <td>{{ index + 1 }}</td>
+                <td>{{ rs.id }}</td>
+                <td>{{ rs.name }}</td>
+                <td>{{ rs.areacode }}</td>
+                <td>{{ rs.totalarea }}</td>
+                <td>{{ rs.zipcode }}</td>
+            </tr>
+            <tr v-if="results.length === 0">
+                <td colspan="6">加载中...</td>
+            </tr>
+        </tbody>
     </table>
 </template>
 
