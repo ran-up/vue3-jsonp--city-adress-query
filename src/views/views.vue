@@ -41,8 +41,8 @@ const getCityData = () => {
     const query = `parentid=${parentid.value[path.value].id}&appkey=`
     const key = '8db15f4d5a5370da'
     const jsonUrl = url + query + key
+
     jsonp(jsonUrl, null, (err, data) => {
-        console.log(data)
         if (err) {
             alert(err)
         } else {
@@ -50,7 +50,7 @@ const getCityData = () => {
         }
     })
 }
-watch(route, val => {
+watch(route, () => {
     path.value = route.path.slice(1)
     getCityData()
 })
