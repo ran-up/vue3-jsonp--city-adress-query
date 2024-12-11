@@ -12,27 +12,27 @@ const router = createRouter({
         {
             path: '/city',
             name: 'city',
-            component: () => import('../components/city.vue')
+            component: () => import('../views/city.vue')
         },
         {
             path: '/beijing',
             name: 'beijing',
-            component: () => import('../components/BeiJingCity.vue')
+            component: () => import('../views/views.vue')
         },
         {
             path: '/tianjin',
             name: 'tianjin',
-            component: () => import('../components/TianJinCity.vue')
+            component: () => import('../views/views.vue')
         },
         {
             path: '/shanghai',
             name: 'shanghai',
-            component: () => import('../components/ShangHaiCity.vue')
+            component: () => import('../views/views.vue')
         },
         {
             path: '/chongqing',
             name: 'chongqing',
-            component: () => import('../components/ChongQingCity.vue')
+            component: () => import('../views/views.vue')
         }
     ]
 })
